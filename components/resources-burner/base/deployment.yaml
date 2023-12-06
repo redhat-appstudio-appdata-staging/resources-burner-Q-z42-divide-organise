@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: resources-burner
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads-stage/jhutar-tenant/resources-burner/resources-burner@sha256:32a5b262102148c539b3958d82314867a5a7fb4d478f3af477cb9c287679e3ff
         imagePullPolicy: Always
         name: container-image
         ports:
