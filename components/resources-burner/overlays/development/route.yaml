@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: resources-burner
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: resources-burner
+    app.kubernetes.io/part-of: resources-burner
+  name: resources-burnerox3u
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: resources-burner
+    weight: 100
+status: {}

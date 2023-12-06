@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: resources-burner
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads-stage/jhutar-tenant/resources-burner/resources-burner@sha256:32a5b262102148c539b3958d82314867a5a7fb4d478f3af477cb9c287679e3ff
+        name: container-image
+        resources: {}
+status: {}
